@@ -4,25 +4,37 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Roast My Page</title>
+
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
   <div class="container">
-<h2 class="robo-title">ROAST MY PAGE 🔥</h2>
-
+    
+    <!-- Robot Title -->
+    <h2 class="robo-title">ROAST MY PAGE 🔥</h2>
+    
+    <!-- Fun Subheading -->
     <h1>So you built a landing page, huh <span class="emoji">😏</span></h1>
     <p class="subtext">Let’s see what a brutally honest robot thinks of it.</p>
 
+    <!-- Robot Image -->
     <img src="robot.png" alt="Sassy Robot" class="robot-image" />
 
+    <!-- Input + CTA -->
     <div class="form-area">
       <input type="text" id="urlInput" placeholder="https://yourwebsite.com" />
-      <button onclick="roastPage()">Roast My Page 🔥</button>
+      <button onclick="submitRoast()">Roast My Page 🔥</button>
     </div>
 
-    <p class="disclaimer">⚠️ This is all in good fun — no offense, just pixels.</p>
+    <!-- Disclaimer -->
+    <p class="disclaimer">⚠️ This is all in good fun. No offense, just pixels.</p>
   </div>
 
-  <script src="script.js"></script>
+  <!-- JS -->
+  <script src="/script.js"></script>
 </body>
 </html>
