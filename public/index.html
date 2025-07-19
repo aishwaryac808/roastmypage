@@ -1,71 +1,103 @@
-<style>
-  body {
-    margin: 0;
-    padding: 60px 20px;
-    background-color: #0f0f0f;
-    color: white;
-    font-family: 'Inter', sans-serif;
-    text-align: center;
-  }
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Roast My Page</title>
 
-  .hero-title {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 2.5rem;
-    color: #ff5722;
-    margin-bottom: 20px;
-  }
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Orbitron:wght@600&display=swap" rel="stylesheet" />
 
-  .hero-text h2 {
-    font-size: 2rem;
-    font-weight: 800;
-    margin-bottom: 12px;
-  }
+    <style>
+      body {
+        margin: 0;
+        padding: 60px 20px;
+        background-color: #0f0f0f;
+        color: white;
+        font-family: 'Inter', sans-serif;
+        text-align: center;
+      }
 
-  .hero-text p {
-    font-size: 1.2rem;
-    color: #aaa;
-    margin-bottom: 40px;
-  }
+      .hero-title {
+        font-family: 'Orbitron', sans-serif;
+        font-size: 2.5rem;
+        color: #ff5722;
+        margin-bottom: 20px;
+      }
 
-  .form-area {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 40px;
-    flex-wrap: wrap;
-  }
+      .hero-text h2 {
+        font-size: 2rem;
+        font-weight: 800;
+        margin-bottom: 12px;
+      }
 
-  input {
-    padding: 14px 18px;
-    font-size: 1rem;
-    width: 320px;
-    border: none;
-    border-radius: 12px;
-  }
+      .hero-text p {
+        font-size: 1.2rem;
+        color: #aaa;
+        margin-bottom: 40px;
+      }
 
-  button {
-    padding: 14px 22px;
-    background-color: #00ff99;
-    border: none;
-    border-radius: 12px;
-    color: black;
-    font-weight: bold;
-    font-size: 1rem;
-    cursor: pointer;
-  }
+      .form-area {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 40px;
+        flex-wrap: wrap;
+      }
 
-  .disclaimer {
-    margin-top: 50px;
-    font-size: 0.9rem;
-    color: #777;
-  }
+      input {
+        padding: 14px 18px;
+        font-size: 1rem;
+        width: 320px;
+        border: none;
+        border-radius: 12px;
+      }
 
-  #output {
-    margin-top: 30px;
-    font-size: 1rem;
-    color: #ccc;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-</style>
+      button {
+        padding: 14px 22px;
+        background-color: #00ff99;
+        border: none;
+        border-radius: 12px;
+        color: black;
+        font-weight: bold;
+        font-size: 1rem;
+        cursor: pointer;
+      }
+
+      .disclaimer {
+        margin-top: 50px;
+        font-size: 0.9rem;
+        color: #777;
+      }
+
+      #output {
+        margin-top: 30px;
+        font-size: 1rem;
+        color: #ccc;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1 class="hero-title">ROAST MY PAGE 🔥</h1>
+
+    <div class="hero-text">
+      <h2>So you built a landing page huh 😉</h2>
+      <p>Let’s see what a brutally honest robot thinks of it.</p>
+    </div>
+
+    <div class="form-area">
+      <input type="text" id="urlInput" placeholder="https://yourwebsite.com" />
+      <button onclick="roastPage()">Roast My Page 🔥</button>
+    </div>
+
+    <div id="output"></div>
+
+    <p class="disclaimer">⚠️ This is all in good fun. No offense, just pixels.</p>
+
+    <script src="script.js"></script>
+  </body>
+</html>
