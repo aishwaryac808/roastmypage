@@ -1,33 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Roast My Page</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="container">
-    <img src="https://i.imgur.com/XePnbYi.png" alt="Fire mascot" class="hero-img" />
+    <h1>So you built a landing page, huh <span class="emoji">😏</span></h1>
+    <p class="subtext">Let’s see what a brutally honest robot thinks of it.</p>
 
-    <h1 class="main-heading">🔥 Roast My Page</h1>
-
-    <p class="subtext">
-      So you built a landing page, huh 😏 Congrats! Now let’s see what a brutally honest robot thinks of it.
-    </p>
-
-    <p class="disclaimer">
-      ⚠️ This is all in good fun. No offense, just pixels.
-    </p>
+    <img src="robot.png" alt="Sassy Robot" class="robot-image" />
 
     <div class="form-area">
-      <input id="urlInput" type="url" placeholder="https://yourwebsite.com" />
-      <button onclick="submitRoast()">Roast My Page 🔥</button>
+      <input type="text" id="urlInput" placeholder="https://yourwebsite.com" />
+      <button onclick="roastPage()">Roast My Page 🔥</button>
     </div>
 
-    <div id="result" class="result-box"></div>
+    <p class="disclaimer">⚠️ This is all in good fun — no offense, just pixels.</p>
   </div>
 
-  <script src="/script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
