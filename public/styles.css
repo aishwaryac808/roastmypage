@@ -61,7 +61,7 @@ input[type="url"]:focus {
 }
 
 button {
-  background-color: #e4572e;
+  background-color: #28a745;
   color: white;
   font-weight: bold;
   border: none;
@@ -73,13 +73,13 @@ button {
 }
 
 button:hover {
-  background-color: #d3471e;
+  background-color: #218838;
 }
 
 .result-box {
   background-color: #fff2ea;
   padding: 24px;
-  border: 2px dashed #e4572e;
+  border: none;
   border-radius: 12px;
   font-size: 16px;
   line-height: 1.6;
