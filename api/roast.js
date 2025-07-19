@@ -1,6 +1,6 @@
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Only POST requests allowed' });
+    return res.status(405).json({ error: 'Method not allowed' });
   }
 
   const { url } = req.body;
@@ -17,8 +17,7 @@ Write a roast that's:
 - 2-3 sentences max
 - Includes 1 emoji at the beginning
 - Ends with one playful improvement tip
-
-Be clever, not mean. Keep it all in good fun.
+Keep it playful. Don't be mean.
 `;
 
   try {
@@ -31,18 +30,17 @@ Be clever, not mean. Keep it all in good fun.
       body: JSON.stringify({
         model: 'gpt-3.5-turbo',
         messages: [{ role: 'user', content: prompt }],
-        max_tokens: 150,
-        temperature: 0.8
+        temperature: 0.8,
+        max_tokens: 150
       })
     });
 
     const data = await response.json();
-    const roast = data.choices?.[0]?.message?.content || "Couldn’t come up with a roast. Try again!";
+    const roast = data.choices?.[0]?.message?.content || "Couldn't roast. Try again.";
 
     return res.status(200).json({ roast });
-
   } catch (error) {
-    console.error('Roast error:', error);
-    return res.status(500).json({ error: 'Internal Server Error' });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Something went wrong' });
   }
 }
