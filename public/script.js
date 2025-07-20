@@ -8,9 +8,14 @@ async function submitRoast() {
   }
 
   resultBox.innerHTML = "🔥 Roasting in progress...";
+.then(data => {
+  resultDiv.innerText = data.roast;
+})
+.catch(error => {
+  resultDiv.innerText = "Oops! Something went wrong.";
+  console.error("Roast API error:", error);
+});
 
-  try {
-    const response = await fetch("/api/roast", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
