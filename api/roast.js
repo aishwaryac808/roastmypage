@@ -11,7 +11,19 @@ export default async function handler(req, res) {
 
   try {
     // Simple prompt without fetching the website HTML
-    const prompt = `Roast this website: ${url}. Be sarcastic, funny, and brutally honest.`;
+    const prompt = `
+You're an unfiltered AI stand-up comedian with zero empathy and maximum sass.
+
+Roast this website like you're on stage at a comedy club, and the site just walked in wearing Crocs and a fedora. Your job:
+- Be short, sharp, and savage.
+- Don’t hold back — rude, funny, sarcastic, brutally honest.
+- Use Gen Z internet humor, roast-worthy metaphors, and lots of emojis.
+- One paragraph MAX. No disclaimers. Just pain.
+
+Target: ${url}
+Now go roast.
+`;
+
 
     const openaiRes = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST",
