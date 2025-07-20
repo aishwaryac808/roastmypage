@@ -1,40 +1,22 @@
-async function submitRoast() {
-  const url = document.getElementById("urlInput").value;
-  const resultBox = document.getElementById("result");
+const urlInput = document.getElementById("urlInput");
+const resultDiv = document.getElementById("result");
 
-  if (!url) {
-    resultBox.innerHTML = "⚠️ Please enter a URL before roasting!";
-    return;
-  }
+document.getElementById("roastBtn").addEventListener("click", function () {
+  const url = urlInput.value;
 
-  resultBox.innerHTML = "🔥 Roasting in progress...";
-.then(function (data) {
-  resultDiv.innerText = data.roast;
-})
-.catch(function (error) {
-  resultDiv.innerText = "Oops! Something went wrong.";
-  console.error("Roast API error:", error);
-});
-
-  console.error("Roast API error:", error);
-});
-
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({ url })
+  fetch("/api/roast", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ url: url }),
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      resultDiv.innerText = data.roast;
+    })
+    .catch((error) => {
+      resultDiv.innerText = "Oops! Something went wrong.";
+      console.error("Roast API error:", error);
     });
-
-    const data = await response.json();
-
-    if (data.roast) {
-      resultBox.innerHTML = `💥 ${data.roast}`;
-    } else {
-      resultBox.innerHTML = "❌ Oops, the roast didn't work. Try again!";
-    }
-  } catch (err) {
-    console.error(err);
-    resultBox.innerHTML = "🚨 Something went wrong. Try again later.";
-  }
-}
+});
