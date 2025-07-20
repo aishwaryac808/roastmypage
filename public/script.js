@@ -11,12 +11,12 @@ document.getElementById("roastBtn").addEventListener("click", function () {
     },
     body: JSON.stringify({ url: url }),
   })
-    .then((response) => response.json())
-    .then((data) => {
-      resultDiv.innerText = data.roast;
-    })
-    .catch((error) => {
-      resultDiv.innerText = "Oops! Something went wrong.";
-      console.error("Roast API error:", error);
-    });
+  .then((response) => response.json())
+  .then((data) => {
+    resultDiv.innerText = data.roast;
+  })
+  .catch((error) => {
+    resultDiv.innerText = "Oops! Something went wrong.";
+    console.error("Roast API error:", error);
+  });
 });
