@@ -8,11 +8,14 @@ async function submitRoast() {
   }
 
   resultBox.innerHTML = "🔥 Roasting in progress...";
-.then(data => {
+.then(function (data) {
   resultDiv.innerText = data.roast;
 })
-.catch(error => {
+.catch(function (error) {
   resultDiv.innerText = "Oops! Something went wrong.";
+  console.error("Roast API error:", error);
+});
+
   console.error("Roast API error:", error);
 });
 
